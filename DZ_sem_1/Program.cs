@@ -75,14 +75,21 @@ Console.WriteLine("Число " + num + " не является четным.");
 
 /*Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 5 -> 2, 4
-8 -> 2, 4, 6, 8
+8 -> 2, 4, 6, 8*/
 
-Console.WriteLine("Введите ваше число:");
+/*Console.WriteLine("Введите ваше число:");
 int numN = Convert.ToInt32(Console.ReadLine());
 
-int i = 2;
+/*int i = 2;
 for(; i <= numN; i += 2)
 {
     Console.WriteLine(i);
+}
+*?
+int i = 2/
+while (i <= numN)
+{
+    Console.WriteLine(i);
+    i += 2;
 }
 */
