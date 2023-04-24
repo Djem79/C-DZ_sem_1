@@ -51,7 +51,6 @@ if (number3 > maxNumber)
 }
 
 Console.WriteLine("Максимальное число: " + maxNumber);
-
 Console.ReadLine();
 */
 
