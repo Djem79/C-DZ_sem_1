@@ -36,10 +36,10 @@ void thirdDigit()
     {
         Console.WriteLine ("Your number have no third digit");
     }
-    else (num < 1000)
+    else if(num > 100)
     {
         int thirdDigit = (num / 100) % 10;
-        Console.WriteLine("Third digit is: " + num % 10);
+        Console.WriteLine("Third digit is: " + thirdDigit);
     }
 }
 thirdDigit();
