@@ -32,39 +32,15 @@ void thirdDigit()
     Console.WriteLine("Input your number:");
     int num = Convert.ToInt32(Console.ReadLine());
 
-    if (num > 99)
-    {   
-        Console.WriteLine("Third digit is: " + num % 10);
-    }
-    else
+    if (num < 100)
     {
         Console.WriteLine ("Your number have no third digit");
     }
+    else (num < 1000)
+    {
+        int thirdDigit = (num / 100) % 10;
+        Console.WriteLine("Third digit is: " + num % 10);
+    }
 }
 thirdDigit();
-
-/*using System;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.Write("Введите число: ");
-        int number = int.Parse(Console.ReadLine());
-
-        int thirdDigit = (int)(number / Math.Pow(10, 2)) % 10;
-
-        if (thirdDigit == 0)
-        {
-            Console.WriteLine("В вашем числе нет третьей цифры.");
-        }
-        else
-        {
-            Console.WriteLine("Третья цифра вашего числа: " + thirdDigit);
-        }
-
-        Console.ReadKey();
-    }
-}\
-*/
 
