@@ -27,8 +27,8 @@ SecDig();*/
 32679 -> 6*/
 
 
-void thirdDigit()
-{
+//void thirdDigit()
+//{
     Console.WriteLine("Input your number:");
     int num = Convert.ToInt32(Console.ReadLine());
 
@@ -36,11 +36,13 @@ void thirdDigit()
     {
         Console.WriteLine ("Your number have no third digit");
     }
-    else if(num > 100)
+    else if(num < 1000)
     {
-        int thirdDigit = (num / 100) % 10;
+        int thirdDigit = (num) % 10;
         Console.WriteLine("Third digit is: " + thirdDigit);
     }
-}
-thirdDigit();
-
+    else if(num > 999)
+    {
+        int fourDigit = (num)/100 %10;
+        Console.WriteLine("Third digit is: " + fourDigit);
+    }
