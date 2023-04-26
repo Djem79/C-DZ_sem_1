@@ -27,8 +27,8 @@ SecDig();*/
 32679 -> 6*/
 
 
-//void thirdDigit()
-//{
+void thirdDigit()
+{
     Console.WriteLine("Input your number:");
     int num = Convert.ToInt32(Console.ReadLine());
 
@@ -46,3 +46,5 @@ SecDig();*/
         int fourDigit = (num)/100 %10;
         Console.WriteLine("Third digit is: " + fourDigit);
     }
+}
+thirdDigit();
