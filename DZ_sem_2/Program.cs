@@ -26,7 +26,7 @@ SecDig();*/
 78 -> третьей цифры нет
 32679 -> 6*/
 
-
+/*
 void thirdDigit()
 {
     Console.WriteLine("Input your number:");
@@ -48,3 +48,27 @@ void thirdDigit()
     }
 }
 thirdDigit();
+*/
+
+/*
+Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+6 -> да
+7 -> да
+1 -> нет
+*/
+
+
+void DayOfWeek()
+{
+    Console.WriteLine("Input your number of the day");
+    int daynum =Convert.ToInt32(Console.ReadLine());
+    if(daynum == 6 || daynum == 7)
+    {
+        Console.WriteLine("This is weekend day");
+    }
+    else
+    {
+        Console.WriteLine("This is working day");
+    }
+}
+DayOfWeek();
