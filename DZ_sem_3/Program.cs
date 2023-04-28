@@ -61,12 +61,14 @@ Console.WriteLine($"Distance AB is {dist:f2}");
 */
 
 
-void PrintCubesTable(int n) 
+void PrintCubesTable(int n)
 {
     Console.WriteLine("Table qubes for 1 to " + n);
-    for (int i = 1; i <= n; i++) 
+    int i = 1;
+    while (i <= n)
     {
         Console.WriteLine(i + " " + Math.Pow(i, 3));
+        i++;
     }
 }
 
