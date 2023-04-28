@@ -53,3 +53,24 @@ double dist = CalculateDistance(xCoordA, xCoordB, yCoordA, yCoordB, zCoordA, zCo
 
 Console.WriteLine($"Distance AB is {dist:f2}");
 */
+
+/*Задача 23
+Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+3 -> 1, 8, 27
+5 -> 1, 8, 27, 64, 125
+*/
+
+
+void PrintCubesTable(int n) 
+{
+    Console.WriteLine("Table qubes for 1 to " + n);
+    for (int i = 1; i <= n; i++) 
+    {
+        Console.WriteLine(i + " " + Math.Pow(i, 3));
+    }
+}
+
+Console.Write("Input number N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+PrintCubesTable(n);
