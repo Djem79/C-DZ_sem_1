@@ -19,11 +19,36 @@ void ShowArray(int [] array1)
     Console.WriteLine();
 }
 
+/*
 int arrSize = 4;
 int minValElm = 100;
 int maxValElm = 999;
 
 int [] randArr = CreateRandomArray (arrSize, minValElm, maxValElm);
 ShowArray(randArr);
+*/
+
+/*Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+[3, 7, 23, 12] -> 19
+[-4, -6, 89, 6] -> 0*/
+
+void summRandom (int [] arraySumNotEven)
+{
+    int sum = 0;
+    for (int i = 0; i < arraySumNotEven.Length; i++)
+        if (i % 2 != 0)
+        {
+            sum += arraySumNotEven[i];
+        }
+        Console.WriteLine ($"Summ of elenets is {sum}");
+}
+
+int arrSize = 6;
+int minValElm = -99;
+int maxValElm = 99;
+
+int [] arrNew = CreateRandomArray (arrSize, minValElm, maxValElm);
+ShowArray(arrNew);
+summRandom(arrNew);
 
 
