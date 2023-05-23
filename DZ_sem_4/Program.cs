@@ -43,3 +43,26 @@ void FindSum (string[] args)
 FindSum(args);
 */
 
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+
+
+void Array(string[] args)
+{
+    int[] numbers = new int[8];
+    
+
+    Console.WriteLine("Input 8 numbers: ");
+    
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write("Element# " + (i + 1) + ": ");
+        numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.Write("Your array:");
+    
+    for (int i = 0; i < numbers.Length; i++)
+    Console.WriteLine(numbers[i] );
+}
+Array(args);
+
