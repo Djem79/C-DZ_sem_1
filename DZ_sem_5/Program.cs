@@ -56,3 +56,26 @@ summRandom(arrNew);
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
 
+void DoubleArray ()
+{
+    double [] arrayDoub = {5.7, 2.3, 8.9, 1.2, 4.6};
+    double minVal = arrayDoub[0];
+    double maxVal = arrayDoub[0];
+
+    Console.WriteLine("Array: ");
+
+    for (int i = 0; i < arrayDoub.Length; i++)
+    {
+        Console.WriteLine(arrayDoub[i]);
+
+        if (arrayDoub[i] < minVal)
+            minVal = arrayDoub[i];
+        else if (arrayDoub[i] > maxVal)
+            maxVal = arrayDoub[i];
+    }
+
+    double difference = maxVal - minVal;
+    Console.WriteLine("Difference betwin maximal & minimal number is: " + difference);
+}
+
+DoubleArray();
