@@ -32,6 +32,7 @@ ShowArray(randArr);
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0*/
 
+/*
 void summRandom (int [] arraySumNotEven)
 {
     int sum = 0;
@@ -50,5 +51,8 @@ int maxValElm = 99;
 int [] arrNew = CreateRandomArray (arrSize, minValElm, maxValElm);
 ShowArray(arrNew);
 summRandom(arrNew);
+*/
 
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+//[3 7 22 2 78] -> 76
 
