@@ -79,10 +79,10 @@ int AckermannFunction(int m, int n)
 
 
 Console.Write("Input m: ");
-int m = int.Parse(Console.ReadLine());
+int m = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Input n: ");
-int n = int.Parse(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
 int result = AckermannFunction(m, n);
 Console.WriteLine("Result for Ackerman function is m={0} и n={1}: {2}", m, n, result);
