@@ -154,7 +154,7 @@ for(int row = 0; row < numRows1; row++)
 26(1,0,1) 55(1,1,1)
 */
 
-
+/*
 int[,,] array = new int[2, 2, 2];
 int minNum = 10;
 int maxNum = 99;
@@ -206,4 +206,52 @@ bool IsUnique (int[,,] array, int num)
         }
     }
     return true;
+}
+*/
+
+/*Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. 
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
+*/
+
+int[,] array = new int[4, 4];
+
+int value = 1;
+int minRow = 0;
+int maxRow = array.GetLength(0) - 1;
+int minCol = 0;
+int maxCol = array.GetLength(1) - 1;
+while (value <= array.GetLength(0) * array.GetLength(1)) 
+{
+    for (int col = minCol; col <= maxCol; col++) 
+    {
+        array[minRow, col] = value++;
+    }
+    minRow++;
+    for (int row = minRow; row <= maxRow; row++) 
+    {
+        array[row, maxCol] = value++;
+    }
+    maxCol--;
+    for (int col = maxCol; col >= minCol; col--) 
+    {
+        array[maxRow, col] = value++;
+    }
+    maxRow--;
+    for (int row = maxRow; row >= minRow; row--) 
+    {
+        array[row, minCol] = value++;
+    }
+    minCol++;
+}
+for (int row = 0; row < array.GetLength(0); row++) 
+{
+    for (int col = 0; col < array.GetLength(1); col++) 
+    {
+        Console.Write(array[row, col] + "\t");
+    }
+    Console.WriteLine();
 }
