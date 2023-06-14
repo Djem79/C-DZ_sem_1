@@ -143,3 +143,67 @@ for(int row = 0; row < numRows1; row++)
     Console.WriteLine();
 }
 */
+
+/*
+Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+Массив размером 2 x 2 x 2
+66(0,0,0) 25(0,1,0)
+34(1,0,0) 41(1,1,0)
+27(0,0,1) 90(0,1,1)
+26(1,0,1) 55(1,1,1)
+*/
+
+
+int[,,] array = new int[2, 2, 2];
+int minNum = 10;
+int maxNum = 99;
+Random random = new Random();
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+            int num;
+            bool isUnique;
+            do
+            {
+                num = random.Next(minNum, maxNum + 1);
+                isUnique = IsUnique(array, num);
+            }
+            while (!isUnique);
+            array[i, j, k] = num;
+        }
+    }
+}
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+            Console.WriteLine($"{array[i, j, k]} ({i},{j},{k})");
+        }
+    }
+}
+
+bool IsUnique (int[,,] array, int num)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                if(array[i,j,k] == num)
+                {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
