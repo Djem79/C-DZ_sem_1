@@ -67,7 +67,8 @@ int AckermannFunction(int m, int n)
     if (m == 0) 
     {
         return n + 1;
-    } else if (m > 0 && n == 0) 
+    } 
+    else if (m > 0 && n == 0) 
     {
         return AckermannFunction(m - 1, 1);
     } 
