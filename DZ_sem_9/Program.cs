@@ -3,7 +3,7 @@
 N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
-
+/*
 void NaturalNumbers()
 {
     Console.Write("Input N number: ");
@@ -21,3 +21,34 @@ void NaturalNumbers()
     }
 }
 NaturalNumbers();
+*/
+
+/*
+Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+M = 1; N = 15 -> 120
+M = 4; N = 8. -> 30
+*/
+void FindSum()
+{
+    Console.Write("Input M value: ");
+    int m = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Input N value: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+
+    int sum = GetSumOfNaturalNumbers(m, n);
+    Console.WriteLine("The sum of natural number from {0} to {1} equals: {2}", m, n, sum);
+
+    int GetSumOfNaturalNumbers(int m, int n)
+    {
+        if (m > n)
+        {
+            return 0;
+        }
+        else
+        {
+            return m + GetSumOfNaturalNumbers(m + 1, n);
+        }
+    }
+}
+FindSum();
